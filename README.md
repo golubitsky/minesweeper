@@ -1,6 +1,6 @@
 **Minesweeper!**  
 
-This is a CLI version of Minesweeper built using Ruby.  
+This is a CLI version of the classic [Minesweeper](http://en.wikipedia.org/wiki/Minesweeper_%28video_game%29) built using Ruby.  
 
 My partner and I built it one afternoon as one of the exercices during [App Academy](http://www.appacademy.io/).  
 
