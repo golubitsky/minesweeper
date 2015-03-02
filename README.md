@@ -1,7 +1,10 @@
 **Minesweeper!**  
 
-This is a version of the classic Minesweeper, built using Ruby, to be run in a prompt.  
-Download repository and bundle install (only one gem: Colorize').  
-Then run ``ruby mine.rb``.  
+This is a CLI version of Minesweeper built using Ruby.  
 
-Enjoy!
+My partner and I built it one afternoon as one of the exercices during (App Academy)[http://www.appacademy.io/].  
+
+**To play:**  
+1. Download repository and bundle install (only one gem: Colorize).  
+2. Run ``ruby mine.rb``.  
+3. Enjoy!
