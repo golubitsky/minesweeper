@@ -77,6 +77,7 @@ class MineSweeper
   end
 
   def save_game
+    puts ''
     puts "Enter file_name to save to (without extension)"
     file_name = gets.chomp
     File.open("#{file_name}.yaml", 'w') { |f| f.puts board.to_yaml}
@@ -88,6 +89,7 @@ class MineSweeper
   end
 
   def load_game
+    puts ''
     puts "Enter file_name to load from (without extension) or q to go back"
     file_name = gets.chomp
     return if file_name == "q"
