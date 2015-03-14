@@ -56,33 +56,59 @@ class Board
   end
 
   def render(game_over)
+    11.times { print '  '.on_light_black }
+    print "\n"
+
     board.each_with_index do |row, x|
+      print '  '.on_light_black
       row.each_with_index do |tile, y|
         char_to_print = ''
         if tile.bombed? && tile.revealed?
-          char_to_print = "X"
+          char_to_print = 'X'.red
         elsif tile.revealed?
-          char_to_print = tile.adjacent_bomb_count.to_s
+          char_to_print = colorize_value(tile.adjacent_bomb_count.to_s)
         elsif tile.flagged?
-          char_to_print = "F"
+          char_to_print = 'F'.light_white
         else
-          char_to_print = " "
+          char_to_print = ' '
         end
 
         if [x, y] == cursor
-          print char_to_print.blue.on_green.blink
-          print ' '.blue.on_green.blink
+          print char_to_print.on_light_blue.blink
+          print ' '.blue.on_light_blue.blink
         else
-          print char_to_print.colorize(background: :cyan)
-          print ' '.colorize(background: :cyan)
+          print char_to_print.colorize(background: :black)
+          print ' '.colorize(background: :black)
         end
       end
+      print '  '.on_light_black
       print "\n"
     end
+    11.times { print '  '.on_light_black }
+    print "\n"
 
     unless game_over
       puts ''
       print "press c to show/hide controls"
+    end
+  end
+
+  def colorize_value(char)
+    case char
+    when "0"
+      char.light_black
+    when "1"
+      char.blue
+    when "2"
+      char.green
+    when "3"
+      char.light_red
+    when "4"
+      char.light_magenta
+    when "5"
+      char.cyan
+    when "6"
+      char.yellow
     end
   end
 
