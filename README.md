@@ -8,7 +8,9 @@ My partner and I built it one afternoon as one of the exercices during [App Acad
 1. Download repository and bundle install (only one gem: Colorize).  
 2. Run ``ruby mine.rb``.  
 3. Enjoy!  
-  
+![controls]  
+![win]  
+![lose]  
 [controls]: ./images/controls.png  
 [win]: ./images/win.png  
 [lose]: ./images/lose.png
